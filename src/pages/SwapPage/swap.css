@@ -1,0 +1,59 @@
+.buy_button {
+    border: 1.5px rgba(255, 255, 255, 0.3) solid;
+    padding: 7px;
+}
+
+.header_Exchange {
+    width: 70%;
+}
+
+.ethereum_img {
+    width: 20px;
+}
+
+.header-button  span {
+    font-size: 25px;
+    color: #fff;
+    
+}
+.header-button_ethereum {
+    /* padding: 0 !important; */
+    width: 50% !important;
+}
+.input_responsive {
+        text-align: end ;
+    }
+
+@media (max-width:642px) {
+    .swap-input {
+        flex-direction: column;
+        /* justify-content: center; */
+        align-items: start;
+    }
+    .responsive_pay {
+        flex-direction: row !important;
+        align-items: center !important;
+        justify-content: space-between !important;
+    }
+    .input_responsive {
+        text-align: center !important;
+    }
+    .header-button_ethereum {
+    padding: 0 !important;
+    width: 100% !important;
+}
+.responsive_mobile {
+    justify-content: center !important;
+}
+.header_Exchange {
+    width: 100%;
+}
+.buy_button {
+    padding-left: 4px;
+    padding-right: 4px;
+}
+.swap-input input {
+    width: 46% !important;
+    align-items: center !important;
+}
+}

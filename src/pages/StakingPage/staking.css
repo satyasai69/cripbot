@@ -1,0 +1,38 @@
+.responsive_text {
+    font-size: 12px !important;
+    padding: 7px 10px !important;
+}
+.stake_btn {
+    padding-top: 1rem !important;
+    padding-bottom: 1rem !important;
+}
+.reward_btn {
+    padding-top: 1rem !important;
+    padding-bottom: 1rem !important;
+}
+
+.stake_text {
+    text-align: center;
+}
+@media (max-width:400px) {
+    .responsive_flex {
+        flex-direction: column;
+    }
+    .reward_btn {
+        margin-top: 1rem;
+    }
+}
+@media (max-width:350px) {
+    .group-inputs-max {
+        flex-direction: column;
+    }
+    .stake_btn {
+    width: 100%;
+}
+}
+
+@media only screen and (max-width: 600px) {
+  .inner-staking {
+    width: 90%;
+  }
+}

@@ -1,0 +1,936 @@
+@import url("https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap");
+#root {
+  overflow: hidden !important;
+}
+body {
+  background-color: #32234c !important;
+  background-image: url("../public/images/default.png");
+}
+p {
+  margin: 0px !important;
+  padding: 0px !important;
+}
+
+h1 {
+  margin: 0px !important;
+  padding: 0px !important;
+}
+
+h2 {
+  margin: 0px !important;
+  padding: 0px !important;
+}
+
+h3 {
+  margin: 0px !important;
+  padding: 0px !important;
+}
+
+h4 {
+  margin: 0px !important;
+  padding: 0px !important;
+}
+
+h5 {
+  margin: 0px !important;
+  padding: 0px !important;
+}
+
+h6 {
+  margin: 0px !important;
+  padding: 0px !important;
+}
+.container {
+  max-width: 1500px !important;
+}
+.header {
+  align-items: center;
+  border-radius: 16px !important;
+  border-radius: var(--radius-2xl);
+  display: flex;
+  gap: 40px;
+  padding: 6px 8px 6px 16px;
+  width: 100%;
+}
+.header-button {
+  align-items: center;
+  border: none;
+  background-image: linear-gradient(
+    to right,
+    rgba(85, 20, 173, 1),
+    rgba(252, 0, 255, 1)
+  );
+  border-radius: 8px !important;
+  color: #a9ff8a;
+  display: flex;
+  color: white;
+  font-size: 17px;
+  padding: 8px 30px;
+  font-family: Rubik;
+  font-weight: 500;
+  text-transform: capitalize;
+  line-height: 27px;
+  transition: all 0.5s ease-out;
+}
+.header-button-outline {
+  border: 1px solid #7910be;
+  border-radius: 8px !important;
+  color: white;
+  display: flex;
+  color: white;
+  background-color: transparent !important;
+  font-size: 18px;
+  padding: 15px 30px;
+  font-family: "Rubik";
+  font-weight: 500;
+  text-transform: capitalize;
+  line-height: 27px;
+  transition: all 0.5s ease-out;
+}
+.navbar {
+  background-color: transparent;
+}
+.navbar a {
+  color: white;
+  text-decoration: none;
+}
+.navbar-nav .nav-link.active,
+.navbar-nav .nav-link.show {
+  color: #f81dfb !important;
+  position: relative; /* Ensure proper positioning of pseudo-element */
+}
+
+.navbar-nav .nav-link.active::after,
+.navbar-nav .nav-link.show::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 8px;
+  width: 50%;
+  height: 3px;
+  border-radius: 34px;
+  background-color: #f81dfb;
+}
+.active {
+  color: #f81dfb; /* Change this to the desired color */
+}
+.nav-link {
+  color: #f5fbf2 !important;
+  font-size: 18px;
+  font-family: "Rubik";
+  font-weight: 400;
+  letter-spacing: 0.36px;
+  margin-right: 20px;
+}
+.navbar-expand-lg .navbar-nav {
+  align-items: center;
+}
+.navbar-expand-lg {
+  width: 100%;
+}
+.mobile {
+  display: none !important;
+}
+
+.desktop {
+  display: block !important;
+}
+.hero-main {
+
+  background-image: url("../public/images/home-header.png");
+  background-repeat: no-repeat !important;
+  background-size: cover !important;
+  /* height: 100vh; */
+}
+
+@media (max-width:600px) {
+  .hero-main {
+  background-image: url("../public/images/home-header-mobile.png") !important;
+}
+}
+.inner-hero {
+  padding-top: 500px;
+  padding-bottom: 113px;
+}
+.inner-hero h1 {
+  color: white;
+  font-size: 64px;
+  font-family: "Rubik";
+  font-weight: 700;
+  text-transform: uppercase;
+  text-shadow: 5px 2px 3px #979797;
+}
+.inner-hero span {
+  color: #f81dfb;
+  text-shadow: 5px 2px rgb(253, 144, 255) 1dfb;
+}
+.inner-bg {
+
+  background-image: url("../public/images/token-layer.png");
+  background-repeat: no-repeat;
+  background-position: 50% 200px;
+}
+
+.inner-hero p {
+  color: #e0e0e0;
+  font-size: 32px;
+  font-family: "Rubik";
+  font-weight: 400;
+  line-height: 42px;
+  letter-spacing: 0.32px;
+}
+.bottm-bg {
+
+  background-image: url("../public/images/bottom-layer.png");
+  background-repeat: no-repeat;
+  background-position: bottom;
+  background-size: cover;
+}
+.content-hero {
+}
+.company {
+  background-color: #0c021e;
+  padding: 25px 0px;
+  border-top: 1px solid rgba(49.29, 49.29, 49.29, 0.68);
+  border-bottom: 1px solid rgba(49.29, 49.29, 49.29, 0.68);
+}
+.company img {
+  width: 200px;
+}
+.cpt {
+
+  background-image: url("../public/images/cpt-bg.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.inner-cpt {
+  padding: 400px 0px 400px 0px;
+}
+.inner-cpt span {
+  color: #f81dfb;
+  font-size: 24px;
+  font-family: "Rubik";
+  font-weight: 400;
+  line-height: 36px;
+}
+.inner-cpt h2 {
+  color: white;
+  font-size: 36px;
+  font-family: Rubik;
+  font-weight: 700;
+  text-transform: uppercase;
+  line-height: 54px;
+  text-shadow: 5px 2px 3px #979797;
+}
+.inner-cpt h3 {
+  color: white;
+  font-size: 19px;
+  font-family: "Rubik";
+  font-weight: 600;
+  line-height: 24px;
+  letter-spacing: 0.5px;
+}
+.inner-cpt p {
+  color: #e0e0e0;
+  font-size: 18px;
+  font-family: Rubik;
+  font-weight: 400;
+  text-transform: uppercase;
+  line-height: 44px;
+  letter-spacing: 0.18px;
+  text-align: justify;
+}
+.inner-cpt img {
+  width: 100%;
+}
+.choose-us {
+  background-image: url(../public/images/whychoose.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+}
+.choose-us h2 {
+  color: white;
+  font-size: 44px;
+  font-family: "Rubik";
+  font-weight: 700;
+  text-transform: capitalize;
+}
+.choose-us p {
+  color: #e0e0e0;
+  font-size: 22px;
+  font-family: "Rubik";
+  font-weight: 400;
+  text-transform: uppercase;
+  line-height: 44px;
+  letter-spacing: 0.22px;
+}
+.inner-choose {
+  padding: 400px 0px;
+}
+
+.updates {
+  background: #0c021e;
+}
+.inner-updates {
+  padding: 100px 0px;
+}
+.inner-updates h2 {
+  text-align: center;
+  color: white;
+  font-size: 48px;
+  font-family: "Rubik";
+  font-weight: 700;
+}
+.inner-updates p {
+  text-align: center;
+  color: white;
+  font-size: 20px;
+  font-family: "Poppins";
+  font-weight: 400;
+}
+.inner-updates .groups-input {
+  background: #d9d9d9;
+  border-radius: 50px;
+  display: flex;
+  align-items: center;
+  padding: 5px 10px;
+  justify-content: space-between;
+  width: 60%;
+  margin: auto;
+}
+.groups-input input {
+  border-radius: 50px;
+  border: none;
+  width: 80%;
+  background: #d9d9d9;
+  padding: 20px;
+}
+.groups-input input::placeholder {
+  font-size: 18px;
+  font-family: "Rubik";
+  font-weight: 400;
+}
+.groups-input input:focus-visible {
+  border: none;
+  outline: none;
+}
+.yesim {
+  padding-left: 57.54px;
+  padding-right: 57.54px;
+  padding: 10px 20.69px;
+  background: #870ec5;
+  border-radius: 44px;
+  justify-content: center;
+  align-items: center;
+  gap: 10.46px;
+  display: inline-flex;
+  text-align: center;
+  color: white;
+  font-size: 20px;
+  font-family: "Rubik";
+  font-weight: 600;
+  border: none;
+}
+.hr {
+  background: #0c021e;
+}
+.footer {
+  background: #0c021e;
+}
+.inner-footer {
+  padding: 50px 0px;
+  border-top: 1px solid white;
+}
+.inner-footer h2 {
+  color: white;
+  font-size: 40px;
+  font-family: "Rubik";
+  font-weight: 700;
+  text-transform: uppercase;
+}
+.inner-footer p {
+  color: white;
+  font-size: 20px;
+  font-family: "Poppins";
+  font-weight: 400;
+  text-transform: capitalize;
+  line-height: 41.2px;
+}
+.chart-main {
+  background-image: url("../public/images/chart-bg.png");
+  padding: 200px 0px;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.chart-main h2 {
+  color: white;
+  font-size: 36px;
+  font-family: Rubik;
+  font-weight: 700;
+  text-transform: uppercase;
+  line-height: 54px;
+}
+.navbar-toggler {
+  background-image: linear-gradient(
+    to right,
+    rgba(85, 20, 173, 1),
+    rgba(252, 0, 255, 1)
+  ) !important;
+}
+/* about page css */
+.hero-about-main {
+
+  background-image: url("../public/images/header-bg.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.about-compnay .company {
+  background-color: black !important;
+}
+.about-us {
+  background-image: url("../public/images/about-us-bg.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.main-experience {
+
+  background-image: url("../public/images/Experience-bg.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.inner-experience {
+  padding: 200px 0px;
+}
+.inner-experience p {
+  color: #e0e0e0;
+  font-size: 22px;
+  font-family: "Rubik";
+  font-weight: 400;
+  text-transform: uppercase;
+  line-height: 44px;
+  letter-spacing: 0.22px;
+}
+.inner-experience h2 {
+  color: white;
+  font-size: 44px;
+  font-family: "Rubik";
+  font-weight: 700;
+  text-transform: capitalize;
+}
+.main-introtounem {
+
+  background-image: url("../public/images/introtounem-bg.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.Other-about {
+  background-image: url("../public/images/otherabouttonuem.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.inner-experiences {
+  padding: 200px 0px;
+}
+.inner-experiences span {
+  color: #f81dfb;
+  font-size: 24px;
+  font-family: "Rubik";
+  font-weight: 400;
+  line-height: 36px;
+}
+.inner-experiences h2 {
+  color: white;
+  font-size: 36px;
+  font-family: "Rubik";
+  font-weight: 700;
+  text-transform: uppercase;
+  line-height: 54px;
+  text-shadow: 5px 2px 3px #979797;
+}
+.inner-experiences p {
+  color: #e0e0e0;
+  font-size: 22px;
+  font-family: "Rubik";
+  font-weight: 400;
+  text-transform: uppercase;
+  line-height: 44px;
+  letter-spacing: 0.22px;
+}
+.community {
+  background-image: url("../public/images/comunity-bg.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.inner-community {
+  padding: 200px 0px;
+}
+.inner-community-div {
+  position: relative;
+  background: rgba(32.3, 32.3, 32.3, 0.25);
+  border-radius: 20px;
+  overflow: hidden;
+  backdrop-filter: blur(187.7px);
+  padding: 60px 30px;
+}
+.inner-community-div h2 {
+  color: white;
+  font-size: 44px;
+  font-family: Rubik;
+  font-weight: 700;
+  text-transform: capitalize;
+  text-align: center;
+}
+.inner-community-div p {
+  text-align: center;
+  color: #e0e0e0;
+  font-size: 22px;
+  font-family: Rubik;
+  font-weight: 400;
+  text-transform: uppercase;
+  line-height: 44px;
+  letter-spacing: 0.22px;
+}
+.about-updates .updates {
+  background-color: black !important;
+}
+.about-updates .footer {
+  background-color: black !important;
+}
+.footer h3 {
+  color: white;
+  font-size: 32px;
+  font-family: Poppins;
+  font-weight: 600;
+  text-transform: capitalize;
+}
+.pl-5 {
+  padding-left: 20px !important;
+}
+.footer ul {
+  margin: 0 !important;
+  padding: 0px 20px !important;
+}
+.footer li {
+  color: #e0e0e0;
+  font-size: 20px;
+  font-family: Poppins;
+  font-weight: 400;
+  text-transform: capitalize;
+  padding: 10px 0px;
+  list-style-type: none;
+}
+.staking {
+  background-image: url("../public/images/staking-bg.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  min-height: 100vh;
+}
+.inner-staking {
+  padding: 100px 0px;
+}
+.staking-card {
+  padding: 28px;
+  background: linear-gradient(
+    139deg,
+    rgba(255, 255, 255, 0) 0%,
+    rgba(255, 255, 255, 0.15) 100%
+  );
+  box-shadow: 0px 4px 49px rgba(0, 7.23, 72.25, 0.12);
+  border-radius: 40px;
+  overflow: hidden;
+  border: 1.5px rgba(255, 255, 255, 0.3) solid;
+  backdrop-filter: blur(25px);
+}
+
+.staking-card h2 {
+  color: white;
+  font-size: 24px;
+  font-family: "Rubik";
+  font-weight: 600;
+  /* text-transform: uppercase; */
+  line-height: 36px;
+}
+.inner-staking-card {
+  padding: 28px;
+  padding-top: 0px;
+  /* background: rgba(11, 3, 32, 0.58); */
+  border-radius: 5px;
+}
+.inner-staking-card .network {
+  padding-left: 19.81px;
+  padding-right: 19.81px;
+  padding-top: 28.07px;
+  padding-bottom: 28.07px;
+  background: #0c021e;
+  border-radius: 4.13px;
+  overflow: hidden;
+  border: 0.83px rgba(255, 255, 255, 0.15) solid;
+  backdrop-filter: blur(9.08px);
+}
+.button-unactive {
+  background: #32234c;
+  align-items: center;
+  border: none;
+
+  border-radius: 8px !important;
+  color: #a9ff8a;
+  display: flex;
+  color: white;
+  font-size: 18px;
+  padding: 8px 30px;
+  font-family: "Rubik";
+  font-weight: 500;
+  text-transform: capitalize;
+  line-height: 27px;
+  transition: all 0.3s ease-out;
+}
+.button-main {
+  position: relative;
+}
+.button-main svg {
+  position: absolute;
+  right: -4px;
+  top: -4px;
+}
+.inner-staking {
+  width: 40%;
+  margin: auto;
+}
+.inner-staking-card h3 {
+  color: white;
+  font-size: 17px;
+  font-family: Rubik;
+  font-weight: 400;
+  line-height: 21px;
+}
+.inner-staking-card span {
+  color: #f81dfb;
+}
+.inner-staking-card .group-inputs-max {
+  padding: 11px;
+  background: rgba(50, 35, 76, 0.54);
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+.group-inputs {
+}
+.group-inputs-max input ::placeholder {
+  color: rgba(255, 255, 255, 0.26);
+  font-size: 14px !important;
+  font-family: "Inter" !important;
+  font-weight: 600;
+  line-height: 20px;
+}
+.group-inputs-max input:focus-visible {
+  outline: none;
+  border: none;
+  box-shadow: none;
+}
+.inner-staking-card .header-button {
+  /* font-size: 11px !important; */
+  /* padding: 7px 30px !important; */
+}
+.inner-staking-card .button-unactive {
+  font-size: 11px !important;
+  padding: 7px 10px !important;
+}
+.inner-staking-card p {
+  color: #a4a4a4;
+  font-size: 19px;
+  font-family: "Rubik";
+  font-weight: 300;
+  line-height: 21px;
+  text-align: center;
+  padding-top: 5px !important;
+}
+.inner-staking-card h4 {
+  color: white;
+  font-size: 16px;
+  font-family: "Rubik";
+  font-weight: 800;
+  line-height: 24px;
+}
+.max-button {
+  padding-left: 27px;
+  padding-right: 27px;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  background: linear-gradient(90deg, #fc00ff 0%, #5514ad 100%);
+  border-radius: 5px;
+  justify-content: center;
+  align-items: center;
+  gap: 19px;
+  display: flex;
+  border: none;
+  color: white;
+  color: white;
+  font-size: 14px;
+  font-family: "Inter";
+  font-weight: 600;
+  line-height: 20px;
+}
+.group-inputs-max input {
+  background: transparent;
+  width: 100%;
+  border-radius: 5px;
+  border: none;
+  padding: 7px;
+}
+.overview {
+  background-image: url("../public/images/overview-bg.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  min-height: 100vh;
+}
+.overview table {
+  width: 100%;
+}
+.overview th {
+  color: rgba(255, 255, 255, 0.35);
+  font-size: 14px;
+  font-family: "Rubik";
+  font-weight: 400;
+  text-align: center;
+  padding: 20px;
+}
+.overview td {
+  text-align: center;
+  padding: 25px;
+  color: white;
+  font-size: 14px;
+  font-family: "Rubik";
+  font-weight: 400;
+  line-height: 21px;
+}
+.swap-input {
+  padding-left: 24px;
+  padding-right: 24px;
+  padding-top: 26px;
+  padding-bottom: 26px;
+  background: rgba(50, 35, 76, 0.54);
+  border-radius: 5px;
+}
+.main-swap {
+  background-image: url("../public/images/staking-bg.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  min-height: 100vh;
+}
+.swap-input label {
+  color: rgba(255, 255, 255, 0.37);
+  font-size: 16px;
+  font-family: "Rubik";
+  font-weight: 400;
+  line-height: 24px;
+}
+.swap-input h6 {
+  color: rgba(255, 255, 255, 0.37);
+  font-size: 12px;
+  font-family: "Rubik";
+  font-weight: 400;
+  line-height: 18px;
+}
+.swap-input input {
+  background-color: transparent;
+  padding: 15px;
+  border: none;
+  outline: none;
+  width: 100%;
+  color: white;
+  font-size: 19px;
+}
+
+.swap-input input::placeholder {
+  color: white;
+  font-size: 31px;
+  font-family: "Inter";
+  font-weight: 600;
+}
+.swap-input h5{
+  color: white;
+  font-size: 31px;
+  font-family: "Inter";
+  font-weight: 600;
+}
+.inner-staking-card h5 {
+  color: rgba(255, 255, 255, 0.37);
+  font-size: 16px;
+  font-family: Rubik;
+  font-weight: 400;
+  line-height: 24px;
+}
+.main-swap .inner-staking {
+  width: 500px;
+}
+.modal-content {
+  padding: 28px !important;
+  background: linear-gradient(
+    139deg,
+    rgba(255, 255, 255, 0) 0%,
+    rgba(255, 255, 255, 0.15) 100%
+  ) !important;
+  box-shadow: 0px 4px 49px rgba(0, 7.23, 72.25, 0.12) !important;
+  border-radius: 20px !important;
+  overflow: hidden !important;
+  border: 1.5px rgba(255, 255, 255, 0.3) solid !important;
+  backdrop-filter: blur(25px) !important;
+}
+.modal-header {
+  border-bottom: none !important;
+  color: white;
+  font-size: 24px;
+  font-family: Rubik;
+  font-weight: 600;
+  text-transform: uppercase;
+  line-height: 36px;
+}
+.modal-body {
+  padding-left: 27px;
+  padding-right: 27px;
+  padding-top: 28px;
+  padding-bottom: 28px;
+  background: rgba(11, 3, 32, 0.58);
+  border-radius: 5px;
+  border-bottom: none !important;
+
+}
+.label-modal{
+  color: rgba(255, 255, 255, 0.37);
+  font-size: 16px;
+  font-family: "Rubik";
+  font-weight: 400;
+  line-height: 24px;
+}
+@media only screen and (max-width: 991px) {
+  .main-swap .inner-staking {
+    width: 100%;
+  }
+  .inner-staking {
+    width: 60%;
+  }
+  .inner-hero {
+    padding-top: 150px;
+    padding-bottom: 113px;
+  }
+  .inner-cpt {
+    padding: 100px 0px 100px 0px;
+  }
+  .inner-choose {
+    padding: 100px 0px;
+  }
+  .chart-main {
+    padding: 100px 0px;
+  }
+  .inner-experiences {
+    padding: 70px 0px;
+  }
+  .inner-experience {
+    padding: 70px 0px;
+  }
+  .inner-community {
+    padding: 70px 0px;
+  }
+  .inner-updates .groups-input {
+    width: 100%;
+  }
+  .groups-input input {
+    width: 50%;
+  }
+}
+@media only screen and (max-width: 767px) {
+  .button-main {
+    width: 100% !important;
+    margin-bottom: 10px;
+  }
+}
+@media only screen and (max-width: 500px) {
+  .swap-icon {
+    position: absolute;
+    left: 44% !important;
+    transform: translateX(-44%) !important;
+    top: 50% !important;
+    transform: translateY(-50%) !important;
+  }
+  .swap-input .header-button {
+    width: 100%;
+    justify-content: center;
+    margin-top: 20px;
+  }
+  .inner-staking-card {
+    padding: 10px;
+  }
+  .staking-card {
+    padding: 10px;
+  }
+  .buttons {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .buttons button {
+    width: 100% !important;
+    text-align: center !important;
+    justify-content: center !important;
+  }
+  .company img {
+    width: 85px;
+  }
+  .container {
+    padding: 0px 20px !important;
+  }
+  .inner-hero h1 {
+    font-size: 40px;
+  }
+  .inner-hero p {
+    font-size: 20px;
+  }
+  .choose-us p {
+    font-size: 18px;
+  }
+  .inner-updates p {
+    font-size: 18px;
+  }
+  .choose-us h2 {
+    font-size: 30px;
+  }
+  .inner-experience h2 {
+    font-size: 30px;
+  }
+  .inner-experience p {
+    font-size: 18px;
+  }
+  .inner-experiences h2 {
+    font-size: 30px;
+  }
+  .inner-experiences p {
+    font-size: 18px;
+  }
+  .community h2 {
+    font-size: 30px;
+  }
+  .community p {
+    font-size: 18px;
+  }
+  .inner-updates h2 {
+    font-size: 30px;
+  }
+  .chart-main h2 {
+    font-size: 30px;
+  }
+  .inner-choose .cards {
+    padding: 5px 29px;
+  }
+  .inner-choose .cards img {
+    width: 20px;
+  }
+  .inner-choose .cards h2 {
+    font-size: 11px;
+  }
+  .inner-choose svg {
+    width: 11px;
+  }
+}

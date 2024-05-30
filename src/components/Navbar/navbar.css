@@ -1,0 +1,9 @@
+.height_toggle {
+    height: auto;
+}
+
+@media (max-width:991px) {
+    .height_toggle {
+        height: 343px;
+    }
+}
