@@ -173,13 +173,13 @@ function Bridge() {
     },
   ];
 
-  const contractAddress = "0xD9052539f42Ce7e2013AbF050808A74b65Ed1A86";
+  const contractAddress = "0xcEac7d4bBA5201bC2615043eCFbBA7Ee36B38cE0";
   useEffect(() => {
     const fetchTokenInfo = async () => {
       try {
         // Connect to Ethereum provider
         const provider = new ethers.providers.JsonRpcProvider(
-          `https://data-seed-prebsc-2-s1.bnbchain.org:8545`
+          `https://arb1.arbitrum.io/rpc`
         );
 
         // Instantiate the token contract
@@ -220,7 +220,7 @@ function Bridge() {
 
       await writeContract({
         abi,
-        address: "0xD9052539f42Ce7e2013AbF050808A74b65Ed1A86",
+        address: "0xcEac7d4bBA5201bC2615043eCFbBA7Ee36B38cE0",
         functionName: "buyTokens",
         args: [], // [BigInt(tokensToBuys)],
         value: BigInt(integerValue), //
