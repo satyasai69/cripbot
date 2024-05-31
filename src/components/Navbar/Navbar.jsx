@@ -1,8 +1,9 @@
 import { useEffect, useState } from "react";
-import {  NavLink } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 import useWindowWidth from "../../hooks/useWindowWidth";
+import { ConnectButton } from "@rainbow-me/rainbowkit";
 
-import "./navbar.css"
+import "./navbar.css";
 
 function Navbar() {
   const [navToggle, setNavToggle] = useState(false);
@@ -11,11 +12,8 @@ function Navbar() {
   useEffect(() => {
     if (width > 991) {
       setNavToggle(true);
-
     }
   }, [width]);
-
-  
 
   return (
     <nav className="navbar navbar-expand-lg navbar-light">
@@ -95,7 +93,10 @@ function Navbar() {
                 ></path>
               </svg>
             </div>
-            <button className="header-button">Connect Wallet</button>
+            <button className="header-button">
+              {" "}
+              <ConnectButton />
+            </button>
           </div>
         </div>
       </div>
