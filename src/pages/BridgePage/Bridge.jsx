@@ -246,6 +246,11 @@ function Bridge() {
     setTokentoget(tokensToget); //(ethers.utils.formatEther(tokensToget)); // Convert the token amount from wei to Ether
   };
   // const togetToken = Tokentoget;
+  // Render a warning message if the input value is below the minimum threshold
+  const warningMessage =
+    amount < 0.000001 ? (
+      <span style={{ color: "red" }}>Amount must be at least 0.000001</span>
+    ) : null;
 
   return (
     <div>
@@ -284,6 +289,7 @@ function Bridge() {
                       type="number"
                       className="w-full h-12 text-[25px] pl-2 outline-none rounded-md"
                       onChange={handleAmountChange}
+                      min="0.000001" // Set the minimum value
                     />
                   </div>
                   <div className="relative">
@@ -305,12 +311,23 @@ function Bridge() {
                     />
                   </div>
                 </div>
+                {warningMessage && (
+                  <span style={{ color: "red" }}>
+                    Amount must be at least 0.000001
+                  </span>
+                )}
                 <button
                   className="header-button header-button_bridge mt-4"
-                  style={{ width: "100%", justifyContent: "center" }}
+                  style={{
+                    width: "100%",
+                    justifyContent: "center",
+                    backgroundColor: warningMessage ? "gray" : "", // Change background color if warning is shown
+                    cursor: warningMessage ? "not-allowed" : "pointer", // Change cursor if warning is shown
+                  }}
                   onClick={BuyToken}
+                  disabled={warningMessage} // Disable the button when the warning is shown
                 >
-                  Swap{" "}
+                  Swap
                 </button>
               </div>
             </div>
