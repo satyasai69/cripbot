@@ -6,7 +6,6 @@ import Dashboard from "../pages/Dashboard/Dashboard";
 import Swap from "../pages/SwapPage/Swap";
 import Bridge from "../pages/BridgePage/Bridge";
 
-
 function Router() {
   return (
     <>
