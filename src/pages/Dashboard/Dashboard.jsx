@@ -23,7 +23,7 @@ function Dashboard() {
       try {
         // Connect to Ethereum provider
         const provider = new ethers.providers.JsonRpcProvider(
-          `https://data-seed-prebsc-2-s1.bnbchain.org:8545`
+          `https://go.getblock.io/723b9e067f2947d1b94a0681049af69c`
         );
 
         const abi = [
