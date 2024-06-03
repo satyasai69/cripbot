@@ -19,6 +19,7 @@ function Staking() {
   //  const [referralAddress, setReferralAddress] = useState("");
   const [selectedButton, setSelectedButton] = useState(1);
   const [referrersCode, setReferrersCode] = useState(address);
+  const [referralAddress, setReferralAddress] = useState(null);
   const [Price, setPrice] = useState(0);
   const { writeContract } = useWriteContract();
 
@@ -403,6 +404,26 @@ function Staking() {
     }
   };
 
+  const handleReferrStake = async () => {
+    try {
+      await writeContract({
+        abi,
+        address: "0xb9A06d63CB788819b41dba689cC74B0Ff94cD6BF",
+        functionName: "refferstake",
+        args: [
+          BigInt(ethers.utils.parseUnits(stakeAmount, 18)),
+          selectedButton,
+          referralAddress,
+        ], // [BigInt(tokensToBuys)],
+        //  value: BigInt(integerValue), //
+      });
+
+      console.log(" successful! refferstake ", stakeAmount, selectedButton);
+    } catch (error) {
+      console.error("Error during staking:", error);
+    }
+  };
+
   const rewardsclam = async () => {
     try {
       await writeContract({
@@ -453,6 +474,7 @@ function Staking() {
     <div className="staking">
       <Navbar />
       <ToastContainer />
+      <div className="Toastify"></div>
       <div>
         <div className="Toastify"></div>
         <div className="inner-staking">
@@ -504,11 +526,31 @@ function Staking() {
                     <Approve stakeAmount={stakeAmount} />
                     <button
                       className="header-button stake_btn "
-                      onClick={handleStake}
+                      // onClick={handleStake}
                       // disabled={}
+                      onClick={() => {
+                        if (!referralAddress) {
+                          handleStake();
+                        } else {
+                          handleReferrStake();
+                        }
+                      }}
                     >
                       Stake
                     </button>
+                  </div>
+                </div>
+
+                <div className="pt-4">
+                  <h4 className="pb-2">Enter Referral Address</h4>
+                  <div className="group-inputs-max">
+                    <input
+                      type="search"
+                      placeholder="Enter Referral Address"
+                      onChange={(e) => setReferralAddress(e.target.value)}
+                      value={referralAddress}
+                      style={{ color: "rgb(255, 255, 255)" }}
+                    />
                   </div>
                 </div>
 
@@ -525,7 +567,7 @@ function Staking() {
                   </button>
                 </div>
                 <div className="pt-4">
-                  <h4 className="pb-2">Referral Address</h4>
+                  <h4 className="pb-2">My Referral Address</h4>
                   <div className="group-inputs-max">
                     <input
                       type="search"
