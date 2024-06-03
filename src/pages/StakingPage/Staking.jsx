@@ -11,12 +11,14 @@ import { useWriteContract } from "wagmi";
 // import stakingContractABI from "../../../abis/StakingContract.json";
 import { ethers } from "ethers";
 import Approve from "./Approve";
+import { useAccount } from "wagmi";
 
 function Staking() {
+  const { address } = useAccount();
   const [stakeAmount, setStakeAmount] = useState("1");
   //  const [referralAddress, setReferralAddress] = useState("");
   const [selectedButton, setSelectedButton] = useState(1);
-  const [referrersCode, setReferrersCode] = useState("Here your referral code");
+  const [referrersCode, setReferrersCode] = useState(address);
   const [Price, setPrice] = useState(0);
   const { writeContract } = useWriteContract();
 
@@ -441,9 +443,11 @@ function Staking() {
         console.error("Error fetching token information:", error);
       }
     };
-
+    setReferrersCode(address);
+    setReferrersCode(address);
+    console.log(address);
     fetchTokenInfo();
-  }, [contractAddress, Price]);
+  }, [contractAddress, Price, address]);
 
   return (
     <div className="staking">
