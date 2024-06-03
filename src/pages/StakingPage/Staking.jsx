@@ -424,6 +424,25 @@ function Staking() {
     }
   };
 
+  const handleunStake = async () => {
+    try {
+      await writeContract({
+        abi,
+        address: "0xb9A06d63CB788819b41dba689cC74B0Ff94cD6BF",
+        functionName: "withdraw",
+        args: [
+          BigInt(ethers.utils.parseUnits(stakeAmount, 18)),
+          selectedButton,
+        ], // [BigInt(tokensToBuys)],
+        //  value: BigInt(integerValue), //
+      });
+
+      console.log(" successful! unstaked", selectedButton, stakeAmount);
+    } catch (error) {
+      console.error("Error during staking:", error);
+    }
+  };
+
   const rewardsclam = async () => {
     try {
       await writeContract({
@@ -535,6 +554,28 @@ function Staking() {
                           handleReferrStake();
                         }
                       }}
+                    >
+                      Stake
+                    </button>
+                  </div>
+                </div>
+
+                <div className="pt-4">
+                  <h4 className="pb-2">unstake amount </h4>
+                  <div className="group-inputs-max">
+                    <input
+                      type="search"
+                      placeholder="CPT Stake Amount"
+                      onChange={(e) => setStakeAmount(e.target.value)}
+                      value={stakeAmount}
+                      style={{ color: "rgb(255, 255, 255)" }}
+                    />
+
+                    <button
+                      className="header-button stake_btn "
+                      // onClick={handleStake}
+                      // disabled={}
+                      onClick={handleunStake}
                     >
                       Stake
                     </button>
