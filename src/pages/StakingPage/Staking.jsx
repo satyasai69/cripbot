@@ -390,7 +390,7 @@ function Staking() {
       await writeContract({
         abi,
         address: "0xb9A06d63CB788819b41dba689cC74B0Ff94cD6BF",
-        functionName: "stake",
+        functionName: "deposit",
         args: [
           BigInt(ethers.utils.parseUnits(stakeAmount, 18)),
           selectedButton,
